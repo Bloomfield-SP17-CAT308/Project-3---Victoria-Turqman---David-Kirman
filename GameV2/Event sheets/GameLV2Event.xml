@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameLV2Event</name>
+    <events>
+        <include>GameEventCommon</include>
+        <event-block sid="298131711628178">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="535753763234091" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="392489458220253" type="Audio">
+                    <param id="0" name="Audio file">MHALLBroken</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;MHALL&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="727664749159318">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="342096582967931" type="Mike">
+                    <param id="0" name="Instance variable">order</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;abc&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="924149324736143">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="896338918355872" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="384553888101464" type="Audio">
+                            <param id="0" name="Tag">&quot;MHALL&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="812437871749838" type="Audio">
+                            <param id="0" name="Audio file">MHALLFull</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;full&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="757095965157657">
+            <conditions>
+                <condition id="0" name="On ended" sid="385263714488813" type="Audio">
+                    <param id="0" name="Tag">&quot;full&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="125658393989054" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="988472027918547">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="239636854839333" type="System">
+                    <param id="0" name="First value">Mike.order</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;abc&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="946748788144734">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="205209783940102" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="554919407236785">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="882847465898478" type="Mike">
+                                    <param id="0" name="Object">Pnote1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set volume" sid="932407386202908" type="Audio">
+                                    <param id="0" name="Tag">&quot;MHALL&quot;</param>
+                                    <param id="1" name="dB">-10</param>
+                                </action>
+                                <action id="0" name="Play" sid="148878836587890" type="Audio">
+                                    <param id="0" name="Audio file">MHALLnote2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;note2&quot;</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="583772575479535" type="Mike">
+                                    <param id="0" name="Instance variable">order</param>
+                                    <param id="1" name="Value">PNote1.num</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="381940152233080" type="Mike">
+                                    <param id="0" name="Object">Note</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="461453008498906" type="Note">
+                                    <param id="0" name="Frame number">choose(0,1,2,3,4,5)</param>
+                                </action>
+                                <action id="2" name="Stop" sid="675490041214981" type="Note" />
+                                <action disabled="1" id="-9" name="Destroy" sid="577496836980259" type="Pnote1" />
+                                <action id="5" name="Set frame" sid="894378207024377" type="Pnote1">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="2" name="Stop" sid="612826879394581" type="Pnote1" />
+                                <action id="-16" name="Wait" sid="906293892037020" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="493205135144689" type="Audio">
+                                    <param id="0" name="Tag">&quot;MHALL&quot;</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="186519798336765" type="Pnote1">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="2" name="Stop" sid="840930154611684" type="Pnote1" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="814198578691390">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="634712224930199" type="Mike">
+                                    <param id="0" name="Object">Pnote2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set volume" sid="147758025768144" type="Audio">
+                                    <param id="0" name="Tag">&quot;MHALL&quot;</param>
+                                    <param id="1" name="dB">-10</param>
+                                </action>
+                                <action id="0" name="Play" sid="344106809324240" type="Audio">
+                                    <param id="0" name="Audio file">MHALLnote1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;note1&quot;</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="591448594683752" type="Mike">
+                                    <param id="0" name="Instance variable">order</param>
+                                    <param id="1" name="Value">PNote2.num</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="682479964343244" type="Mike">
+                                    <param id="0" name="Object">Note</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="974238804541611" type="Note">
+                                    <param id="0" name="Frame number">choose(0,1,2,3,4,5)</param>
+                                </action>
+                                <action id="2" name="Stop" sid="791805776756964" type="Note" />
+                                <action id="5" name="Set frame" sid="853516251163401" type="Pnote2">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="2" name="Stop" sid="684021727215818" type="Pnote2" />
+                                <action id="-16" name="Wait" sid="825072542965534" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="178873789319482" type="Audio">
+                                    <param id="0" name="Tag">&quot;MHALL&quot;</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="961015213925367" type="Pnote2">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="2" name="Stop" sid="210506504079540" type="Pnote2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="522932087052619">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="703486334135984" type="Mike">
+                                    <param id="0" name="Object">Pnote3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set volume" sid="329771750226917" type="Audio">
+                                    <param id="0" name="Tag">&quot;MHALL&quot;</param>
+                                    <param id="1" name="dB">-10</param>
+                                </action>
+                                <action id="0" name="Play" sid="287774439443848" type="Audio">
+                                    <param id="0" name="Audio file">MHALLnote3</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;note3&quot;</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="741631230209055" type="Mike">
+                                    <param id="0" name="Instance variable">order</param>
+                                    <param id="1" name="Value">PNote3.orderLetter</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="346126526363727" type="Mike">
+                                    <param id="0" name="Object">Note</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="661138233130364" type="Note">
+                                    <param id="0" name="Frame number">choose(0,1,2,3,4,5)</param>
+                                </action>
+                                <action id="2" name="Stop" sid="401809182321830" type="Note" />
+                                <action id="5" name="Set frame" sid="641629843155653" type="Pnote3">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="2" name="Stop" sid="522911359182413" type="Pnote3" />
+                                <action id="-16" name="Wait" sid="356831170098756" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="886008021406233" type="Audio">
+                                    <param id="0" name="Tag">&quot;MHALL&quot;</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="658908921290875" type="Pnote3">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="2" name="Stop" sid="497209752451426" type="Pnote3" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

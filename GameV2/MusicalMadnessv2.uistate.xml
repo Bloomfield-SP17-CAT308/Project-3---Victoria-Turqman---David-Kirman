@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="2">GameLV1</layout>
+        <layout order="1">Title</layout>
+        <layout active="1" order="3">GameLV2</layout>
+        <event-sheet order="0">TitleEvent</event-sheet>
+        <event-sheet order="4">GameLV1Event</event-sheet>
+        <event-sheet order="5">GameLV2Event</event-sheet>
+        <event-sheet order="6">GameEventCommon</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/UI/" />
+        <folder expanded="1" path="object-folder/Game/" />
+        <folder expanded="1" path="object-folder/BG/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="0" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/camera/" />
+        <folder expanded="1" path="animation-folder/WholeNoteNav/" />
+        <folder expanded="1" path="animation-folder/playButton/" />
+        <folder expanded="1" path="animation-folder/creditsButton/" />
+        <folder expanded="1" path="animation-folder/Mike/" />
+        <folder expanded="1" path="animation-folder/Note/" />
+        <folder expanded="1" path="animation-folder/Pnote1/" />
+        <folder expanded="1" path="animation-folder/Pnote2/" />
+        <folder expanded="1" path="animation-folder/Pnote3/" />
+        <folder expanded="1" path="animation-folder/TitleBG/" />
+        <folder expanded="1" path="animation-folder/SheetMusic/" />
+    </folders-expanded>
+</c2uistate>

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TitleEvent</name>
+    <events>
+        <event-block sid="113671597359870">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="192357295939494" type="System">
+                    <param id="0" name="Interval (seconds)">0.2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="262758418334171" type="System">
+                    <param id="0" name="Object to create">Note</param>
+                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                    <param id="2" name="X">random(50,600)</param>
+                    <param id="3" name="Y">random(50,150)</param>
+                </action>
+                <action id="5" name="Set frame" sid="946438214999078" type="Note">
+                    <param id="0" name="Frame number">choose(0,1,2,3,4,5)</param>
+                </action>
+                <action id="2" name="Stop" sid="439206478812756" type="Note" />
+                <action id="-8" name="Set angle" sid="365618354518013" type="Note">
+                    <param id="0" name="Angle">random(0,30)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="146967554061023">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="193807140688192" type="WholeNoteNav">
+                    <param id="0" name="Instance variable">num</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="372998225963094" type="WholeNoteNav">
+                    <param id="0" name="Y">playButton.Y</param>
+                </action>
+                <action id="4" name="Set animation" sid="570629036467299" type="playButton">
+                    <param id="0" name="Animation">&quot;Selected&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="401972507262527" type="creditsButton">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="156765102981164">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="433117506433945" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="595194887993034" type="System">
+                            <param id="0" name="Layout">&quot;GameLV1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="699875157477033">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="724419083388185" type="WholeNoteNav">
+                    <param id="0" name="Instance variable">num</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="621661694898537" type="WholeNoteNav">
+                    <param id="0" name="Y">creditsButton.Y</param>
+                </action>
+                <action id="4" name="Set animation" sid="851298347877593" type="creditsButton">
+                    <param id="0" name="Animation">&quot;Selected&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="110413599667628" type="playButton">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="670311242240625">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="879654096273186" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="648397632801167" type="WholeNoteNav">
+                    <param id="0" name="Instance variable">num</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="364048297418701">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="560773645680861" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="407970496086016" type="WholeNoteNav">
+                    <param id="0" name="Instance variable">num</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="591741193362871">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="414465519754902" type="WholeNoteNav">
+                    <param id="0" name="Instance variable">num</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="937946463064579" type="WholeNoteNav">
+                    <param id="0" name="Instance variable">num</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="301087016324545">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="120811231906389" type="WholeNoteNav">
+                    <param id="0" name="Instance variable">num</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="625564525477611" type="WholeNoteNav">
+                    <param id="0" name="Instance variable">num</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="212000705331257">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="150972747072202" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="879119503942489" type="Audio">
+                    <param id="0" name="Audio file">HSKTFull</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;hskt&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="817898449981391">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="843193998992365" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="595217204032164" type="Audio">
+                    <param id="0" name="Tag">&quot;hskt&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

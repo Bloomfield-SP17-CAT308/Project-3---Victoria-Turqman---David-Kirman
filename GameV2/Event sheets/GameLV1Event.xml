@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameLV1Event</name>
+    <events>
+        <include>GameEventCommon</include>
+        <event-block sid="804189231717183">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="408368535299852" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="936749029488683" type="Audio">
+                    <param id="0" name="Audio file">ABCBroken</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;ABC&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="407791978290935">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="779488788877224" type="Mike">
+                    <param id="0" name="Instance variable">order</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;abc&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="730619893373682">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="556958031572104" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="815403363101129" type="Audio">
+                            <param id="0" name="Tag">&quot;ABC&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="551393863722918" type="Audio">
+                            <param id="0" name="Audio file">ABCFull</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;full&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="135396753063584">
+            <conditions>
+                <condition id="0" name="On ended" sid="674137047788388" type="Audio">
+                    <param id="0" name="Tag">&quot;full&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="451809733809115" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="545197148569001">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="221533781402877" type="System">
+                    <param id="0" name="First value">Mike.order</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;abc&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="274218555685063">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="723664938737421" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="261088323663120">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="387004019801976" type="Mike">
+                                    <param id="0" name="Object">Pnote1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set volume" sid="807467640206857" type="Audio">
+                                    <param id="0" name="Tag">&quot;ABCBroken&quot;</param>
+                                    <param id="1" name="dB">-10</param>
+                                </action>
+                                <action id="0" name="Play" sid="534010948629593" type="Audio">
+                                    <param id="0" name="Audio file">ABCnote1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;note1&quot;</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="326800461687929" type="Mike">
+                                    <param id="0" name="Instance variable">order</param>
+                                    <param id="1" name="Value">PNote1.num</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="563612609760826" type="Mike">
+                                    <param id="0" name="Object">Note</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="910900113307674" type="Note">
+                                    <param id="0" name="Frame number">choose(0,1,2,3,4,5)</param>
+                                </action>
+                                <action id="2" name="Stop" sid="484777907773051" type="Note" />
+                                <action disabled="1" id="-9" name="Destroy" sid="361960167510254" type="Pnote1" />
+                                <action id="5" name="Set frame" sid="670401562893146" type="Pnote1">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="2" name="Stop" sid="710044576448223" type="Pnote1" />
+                                <action id="-16" name="Wait" sid="860500254324415" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="583223872979562" type="Audio">
+                                    <param id="0" name="Tag">&quot;ABCBroken&quot;</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="849646635552374" type="Pnote1">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="2" name="Stop" sid="845903346969619" type="Pnote1" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="364740957481098">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="717438664268346" type="Mike">
+                                    <param id="0" name="Object">Pnote2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set volume" sid="676459411127417" type="Audio">
+                                    <param id="0" name="Tag">&quot;ABCBroken&quot;</param>
+                                    <param id="1" name="dB">-10</param>
+                                </action>
+                                <action id="0" name="Play" sid="486506368562163" type="Audio">
+                                    <param id="0" name="Audio file">ABCnote2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;note2&quot;</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="145418559704828" type="Mike">
+                                    <param id="0" name="Instance variable">order</param>
+                                    <param id="1" name="Value">PNote2.num</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="229743400688291" type="Mike">
+                                    <param id="0" name="Object">Note</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="774439535635836" type="Note">
+                                    <param id="0" name="Frame number">choose(0,1,2,3,4,5)</param>
+                                </action>
+                                <action id="2" name="Stop" sid="917644915259926" type="Note" />
+                                <action id="5" name="Set frame" sid="984604377236702" type="Pnote2">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="2" name="Stop" sid="806612900109483" type="Pnote2" />
+                                <action id="-16" name="Wait" sid="135397570985687" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="519799340167524" type="Audio">
+                                    <param id="0" name="Tag">&quot;ABCBroken&quot;</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="480660271378156" type="Pnote2">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="2" name="Stop" sid="743466624891173" type="Pnote2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="664499775951995">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="304015757320132" type="Mike">
+                                    <param id="0" name="Object">Pnote3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set volume" sid="319560068821747" type="Audio">
+                                    <param id="0" name="Tag">&quot;ABCBroken&quot;</param>
+                                    <param id="1" name="dB">-10</param>
+                                </action>
+                                <action id="0" name="Play" sid="779535109669134" type="Audio">
+                                    <param id="0" name="Audio file">ABCnote3</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;note3&quot;</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="219778056679744" type="Mike">
+                                    <param id="0" name="Instance variable">order</param>
+                                    <param id="1" name="Value">PNote3.orderLetter</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="191580010602670" type="Mike">
+                                    <param id="0" name="Object">Note</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="701849139338323" type="Note">
+                                    <param id="0" name="Frame number">choose(0,1,2,3,4,5)</param>
+                                </action>
+                                <action id="2" name="Stop" sid="933311217274483" type="Note" />
+                                <action id="5" name="Set frame" sid="388213649646213" type="Pnote3">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="2" name="Stop" sid="920328558264021" type="Pnote3" />
+                                <action id="-16" name="Wait" sid="529115526943878" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="108147970467837" type="Audio">
+                                    <param id="0" name="Tag">&quot;ABCBroken&quot;</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="647607612660242" type="Pnote3">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="2" name="Stop" sid="392584303623080" type="Pnote3" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

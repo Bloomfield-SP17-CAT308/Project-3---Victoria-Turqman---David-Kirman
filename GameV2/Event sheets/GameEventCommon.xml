@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEventCommon</name>
+    <events>
+        <event-block sid="257848257856984">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="351921120403844" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="268034550308593" type="Pnote1" />
+                <action id="2" name="Stop" sid="391919509186078" type="Pnote2" />
+                <action id="2" name="Stop" sid="191394279172062" type="Pnote3" />
+                <action id="33" name="Stop all" sid="832912688768607" type="Audio" />
+            </actions>
+        </event-block>
+        <event-block sid="955309128912104">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="372433091441542" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="460498879505194" type="camera">
+                    <param id="0" name="X">lerp(camera.X, Mike.X,0.025)</param>
+                    <param id="1" name="Y">lerp(camera.Y, Mike.Y,0.025)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="877203626336516">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="348465685232344" type="System">
+                    <param id="0" name="First value">len(Mike.order)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="115385884854832" type="Mike">
+                    <param id="0" name="Instance variable">order</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="784945521701734">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="518501437289719" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="731559545944563" type="Audio">
+                            <param id="0" name="Audio file">Wrong - Buzzer</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;buzz&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

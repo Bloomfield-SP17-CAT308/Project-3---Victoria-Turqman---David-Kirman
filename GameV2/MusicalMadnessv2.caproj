@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>MusicalMadnessv2</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="UI">
+            <object-type name="camera" sid="512227782101443">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="736652199648789">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="515129721165163" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WholeNoteNav" sid="731221831378919">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="num" sid="525254803847455" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="235996747901800" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="playButton" sid="920421051369113">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523762402125000" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="948190524358448" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Controls1" sid="873142308879986">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="Controls2" sid="419339370212152">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="creditsButton" sid="828598411664296">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="193723860039421" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="459569203328693" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Game">
+            <object-type name="Mike" sid="720076470145377">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="order" sid="941453418360129" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="8Direction" sid="781401665412280">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426444530401506" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Note" sid="988307323174102">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="842771179982802">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811554970284812" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Pnote1" sid="176278145290263">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="num" sid="459867670749879" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="534769250916158" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Pnote2" sid="106140457151923">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="num" sid="500213078033366" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="347626731351915" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Pnote3" sid="336449060439615">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="orderLetter" sid="499446104050556" type="string" />
+                    <instance-variable name="num" sid="991131717955834" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="925861814677313" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="BG">
+            <object-type name="TitleBG" sid="545906382057603">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="140018498613519" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BGPiano" sid="997823472518485">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="BGViolin" sid="170984948914798">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="SheetMusic" sid="900170312405268">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="538163787923240" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Audio" sid="259012324760606">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Keyboard" sid="896208613674773">
+            <plugin id="Keyboard" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Title.xml</layout>
+        <layout>GameLV1.xml</layout>
+        <layout>GameLV2.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>TitleEvent.xml</event-sheet>
+        <event-sheet>GameEventCommon.xml</event-sheet>
+        <event-sheet>GameLV1Event.xml</event-sheet>
+        <event-sheet>GameLV2Event.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Audio" uid="0">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="1" />
+    </global-instances>
+    <sounds-folder>
+        <file name="ABCnote1.m4a" />
+        <file name="ABCnote1.ogg" />
+        <file name="ABCnote2.m4a" />
+        <file name="ABCnote2.ogg" />
+        <file name="ABCnote3.m4a" />
+        <file name="ABCnote3.ogg" />
+        <file name="HSKTnote1.m4a" />
+        <file name="HSKTnote1.ogg" />
+        <file name="HSKTnote2.m4a" />
+        <file name="HSKTnote2.ogg" />
+        <file name="HSKTnote3.m4a" />
+        <file name="HSKTnote3.ogg" />
+        <file name="MHALLnote1.m4a" />
+        <file name="MHALLnote1.ogg" />
+        <file name="MHALLnote2.m4a" />
+        <file name="MHALLnote2.ogg" />
+        <file name="MHALLnote3.m4a" />
+        <file name="MHALLnote3.ogg" />
+        <file name="RYBnote1.m4a" />
+        <file name="RYBnote1.ogg" />
+        <file name="RYBnote2.m4a" />
+        <file name="RYBnote2.ogg" />
+        <file name="RYBnote3.m4a" />
+        <file name="RYBnote3.ogg" />
+        <file name="WOTBnote1.m4a" />
+        <file name="WOTBnote1.ogg" />
+        <file name="WOTBnote2.m4a" />
+        <file name="WOTBnote2.ogg" />
+        <file name="WOTBnote3.m4a" />
+        <file name="WOTBnote3.ogg" />
+        <file name="Wrong - Buzzer.m4a" />
+        <file name="Wrong - Buzzer.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="ABCBroken.m4a" />
+        <file name="ABCBroken.ogg" />
+        <file name="ABCFull.m4a" />
+        <file name="ABCFull.ogg" />
+        <file name="HSKTBroken.m4a" />
+        <file name="HSKTBroken.ogg" />
+        <file name="HSKTFull.m4a" />
+        <file name="HSKTFull.ogg" />
+        <file name="MHALLBroken.m4a" />
+        <file name="MHALLBroken.ogg" />
+        <file name="MHALLFull.m4a" />
+        <file name="MHALLFull.ogg" />
+        <file name="RYBBroken.m4a" />
+        <file name="RYBBroken.ogg" />
+        <file name="RYBFull.m4a" />
+        <file name="RYBFull.ogg" />
+        <file name="WOTBBroken.m4a" />
+        <file name="WOTBBroken.ogg" />
+        <file name="WOTBFull.m4a" />
+        <file name="WOTBFull.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
