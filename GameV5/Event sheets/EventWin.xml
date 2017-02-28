@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventWin</name>
+    <events>
+        <event-block sid="638903323483814">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="124571390318437" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="827925353678413" type="Audio" />
+                <action id="0" name="Play" sid="755929401718307" type="Audio">
+                    <param id="0" name="Audio file">WOTBFull</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;WOTB&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="432389665936213" type="Lightbulb">
+                    <param id="0" name="Pin to">player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="690303321826358" type="SpeechBubble">
+                    <param id="0" name="Pin to">player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="823507581940767" type="Thanks">
+                    <param id="0" name="Pin to">SpeechBubble</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="887034074128223" type="EndFade">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="356820349709543">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="105079109890488" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="925807490313075" type="player">
+                    <param id="0" name="Instance variable">anim</param>
+                    <param id="1" name="Value">&quot;WalkingBack&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="203529248087344" type="player">
+                    <param id="0" name="Animation">&quot;WalkingBack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="137841734374542">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="834431233701925" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="529841663901453" type="player">
+                    <param id="0" name="Instance variable">anim</param>
+                    <param id="1" name="Value">&quot;Walking&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="834038668347650" type="player">
+                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="180978625652088">
+            <conditions>
+                <condition id="3" name="On key released" sid="692119376676490" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="3" name="On key released" sid="184011035546743" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="793485567390326" type="player">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="421787609934489">
+            <conditions>
+                <condition id="2" name="Key is down" sid="528293078222498" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="110246783248149" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="332321502502668" type="player">
+                    <param id="0" name="Animation">Self.anim</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="271560829236555">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="315804466873582" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="367952447864668" type="EndFade" />
+                <action id="-9" name="Destroy" sid="653707204078298" type="SpeechBubble" />
+                <action id="-9" name="Destroy" sid="491711672056291" type="Thanks" />
+                <action behavior="Fade" id="1" name="Start fade" sid="433583568194856" type="Lightbulb" />
+            </actions>
+        </event-block>
+        <event-block sid="797730892562639">
+            <conditions>
+                <condition behavior="Fade" id="1" name="On fade-in finished" sid="141894980306905" type="EndFade" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="718692573112492" type="System">
+                    <param id="0" name="Layout">Title</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="792975828677689">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="246292828077917" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="852389874784036" type="Audio">
+                    <param id="0" name="Tag">&quot;WOTB&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
