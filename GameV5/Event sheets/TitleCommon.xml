@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TitleCommon</name>
+    <events>
+        <event-block sid="496295597161050">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="752694707414780" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="265048308516953" type="PianoFade1">
+                    <param id="0" name="X">PianoKeyMenu.X</param>
+                    <param id="1" name="Y">PianoKeyMenu.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="236190812715770" type="PianoFade2">
+                    <param id="0" name="X">PianoKeyMenu2.X</param>
+                    <param id="1" name="Y">PianoKeyMenu2.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="746732880000673" type="PianoFade3">
+                    <param id="0" name="X">PianoKeyMenu3.X</param>
+                    <param id="1" name="Y">PianoKeyMenu3.Y</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="398469562630622" type="PianoFade1">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="614131804941475" type="PianoFade2">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="188698549882087" type="PianoFade3">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="134249164003342">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="385294268326848" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="806904467675328" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="484848630615445" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">notePosition</param>
+                    <param id="1" name="Value">12</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="442770471792693">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="737187481921070" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="456892277067041" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="654703712721839" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">notePosition</param>
+                    <param id="1" name="Value">12</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="647470649983390">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="946056920718418" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="740910552742572" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="773093034008945">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="854028640985963" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="186998041964254" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="425503841368033">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="533862510943256" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">notePosition</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">16</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="300815918322578" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">notePosition</param>
+                    <param id="1" name="Value">40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="111460351417460">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="357756110823013" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">notePosition</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="311342149558408" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">notePosition</param>
+                    <param id="1" name="Value">16</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="240085806453631">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="193355811617185" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="131100957211812" type="PianoFade1">
+                    <param id="0" name="Opacity">lerp(PianoFade1.Opacity,100,0.05)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="470149423516475">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="753909412399941" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="511567256399154" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;&quot;&amp;PianoKeyMenu.note</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="103396731686974">
+            <conditions>
+                <condition id="-22" name="Else" sid="773701607168720" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="554427598198016" type="PianoFade1">
+                    <param id="0" name="Opacity">lerp(PianoFade1.Opacity,0,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="235774046895125">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="912258439851391" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="481209211779299" type="PianoFade2">
+                    <param id="0" name="Opacity">lerp(PianoFade2.Opacity,100,0.05)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="119443918861435">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="597324552499002" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="540724554703841" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;&quot;&amp;PianoKeyMenu2.note</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="712006428726700">
+            <conditions>
+                <condition id="-22" name="Else" sid="248576513228191" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="752015889477038" type="PianoFade2">
+                    <param id="0" name="Opacity">lerp(PianoFade2.Opacity,0,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="770322911240024">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="300482416532569" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="353793315795077" type="PianoFade3">
+                    <param id="0" name="Opacity">lerp(PianoFade3.Opacity,100,0.05)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="343122226060373">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="457636965271013" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="592148360597439" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;&quot;&amp;PianoKeyMenu3.note</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="532308843804161">
+            <conditions>
+                <condition id="-22" name="Else" sid="557869779845725" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="893807125793844" type="PianoFade3">
+                    <param id="0" name="Opacity">lerp(PianoFade3.Opacity,0,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

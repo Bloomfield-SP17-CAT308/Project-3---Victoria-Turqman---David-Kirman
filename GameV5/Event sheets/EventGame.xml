@@ -1,0 +1,1923 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventGame</name>
+    <events>
+        <event-block sid="537711295186473">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="462141462216425" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="244927035302268" type="player">
+                    <param id="0" name="Instance variable">anim</param>
+                    <param id="1" name="Value">&quot;WalkingBack&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="363571151984586" type="player">
+                    <param id="0" name="Animation">&quot;WalkingBack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="826595028191719">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="511081718187903" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="692813752910986" type="player">
+                    <param id="0" name="Instance variable">anim</param>
+                    <param id="1" name="Value">&quot;Walking&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="793367634017407" type="player">
+                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="696850037636268">
+            <conditions>
+                <condition id="3" name="On key released" sid="645218252012896" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="3" name="On key released" sid="687151372855741" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="883610836404117" type="player">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="586387286862631">
+            <conditions>
+                <condition id="2" name="Key is down" sid="607636799874784" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="814195368841805" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="517141469533939" type="player">
+                    <param id="0" name="Animation">Self.anim</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="581843673584268">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="216020029812074" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="182959565939534" type="Spacebar">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="271547003157239" type="Spacebar">
+                    <param id="0" name="Duration">3</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;pressMe&quot;</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="305746994535947" type="Tut1">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="765978320123626" type="Tut2">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="427593209537155" type="player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="616691938165496" type="PianoFade1">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="236206328351759" type="PianoFade2">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="336785348707249" type="PianoFade3">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="892463322105422" type="PianoFade4">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="808546329334703" type="PianoKeyMenu4">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="249452816099859" type="PianoWoodBG2">
+                    <param id="0" name="Instance variable">notePositionX</param>
+                    <param id="1" name="Value">staff.X + 80</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="890576496359979" type="Lightbulb">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="358999543993779" type="Lightbulb">
+                    <param id="0" name="Pin to">player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="676648205091316">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="144791360824823" type="Spacebar">
+                    <param id="0" name="Tag">&quot;pressMe&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="722416117665334" type="Spacebar">
+                    <param id="0" name="Instance variable">Appear</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="873267887839046">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="237246754193270" type="Spacebar">
+                    <param id="0" name="Instance variable">Appear</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="418560280027935" type="Spacebar">
+                    <param id="0" name="Opacity">lerp(Spacebar.Opacity,100,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="795326471465844">
+            <conditions>
+                <condition id="-22" name="Else" sid="914655786571246" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="579616415719032" type="Spacebar">
+                    <param id="0" name="Opacity">lerp(Spacebar.Opacity,0,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="106330697392934">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="690505956237219" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="764725450428845">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="968329341836866" type="Spacebar">
+                            <param id="0" name="Instance variable">tut</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="303847199497299" type="Spacebar">
+                            <param id="0" name="Instance variable">Appear</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="938983610158361" type="Spacebar">
+                            <param id="0" name="Tag">&quot;pressMe&quot;</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="974460396011816" type="Spacebar">
+                            <param id="0" name="Duration">3</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;pressMe&quot;</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="808894457143823" type="Spacebar">
+                            <param id="0" name="Instance variable">tut</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="179724281185289">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="828369522265157" type="Spacebar">
+                    <param id="0" name="Instance variable">tut</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="803482374943886" type="Tut1">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="265137684398634">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="583849708053344" type="Spacebar">
+                    <param id="0" name="Instance variable">tut</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="244063270113686" type="Tut2">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="406178036661242" type="Tut1">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="537649485241219">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="498143154083495" type="Spacebar">
+                    <param id="0" name="Instance variable">tut</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="547380001806836" type="Tut2">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="641027504020237" type="SpeechBubble">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="821423774085626">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="889140169609366" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="619535855881498" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="918187776831833" type="Spacebar">
+                            <param id="0" name="Instance variable">Appear</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="986294143523375" type="Spacebar">
+                            <param id="0" name="Tag">&quot;pressMe&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="202675934511402" type="Audio">
+                            <param id="0" name="Audio file">HotCrossedBuns1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;HCB&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="440280928121735">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="248679686683807" type="player">
+                    <param id="0" name="Object">PianoFade1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="411198381502078" type="PianoFade1">
+                    <param id="0" name="Opacity">lerp(Self.Opacity,100,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="687509656878408">
+            <conditions>
+                <condition id="-22" name="Else" sid="373497392620337" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="843377874504443" type="PianoFade1">
+                    <param id="0" name="Opacity">lerp(Self.Opacity,0,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="838073079533694">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="306860219935569" type="player">
+                    <param id="0" name="Object">PianoFade2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="628415743722766" type="PianoFade2">
+                    <param id="0" name="Opacity">lerp(Self.Opacity,100,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="725885738703840">
+            <conditions>
+                <condition id="-22" name="Else" sid="773781083604750" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="240492246514886" type="PianoFade2">
+                    <param id="0" name="Opacity">lerp(Self.Opacity,0,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="388009104072875">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="326966394341368" type="player">
+                    <param id="0" name="Object">PianoFade3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="887117113287837" type="PianoFade3">
+                    <param id="0" name="Opacity">lerp(Self.Opacity,100,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="289744197484230">
+            <conditions>
+                <condition id="-22" name="Else" sid="719690112010386" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="241548598786683" type="PianoFade3">
+                    <param id="0" name="Opacity">lerp(Self.Opacity,0,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="631771730543301">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="760754991416194" type="player">
+                    <param id="0" name="Object">PianoFade4</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="753628418594946">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="744518836786712" type="PianoKeyMenu4">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="985810576613177" type="PianoFade4">
+                            <param id="0" name="Opacity">lerp(Self.Opacity,100,0.05)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="604901970995389">
+            <conditions>
+                <condition id="-22" name="Else" sid="992634580584657" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="314037625032817" type="PianoFade4">
+                    <param id="0" name="Opacity">lerp(Self.Opacity,0,0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="985669672608431">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="160826699008078" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="828876620089085">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="276643851815676" type="player">
+                            <param id="0" name="Object">PianoKeyMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="386201084754392" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;&quot;&amp;PianoKeyMenu.note</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="456308372170770" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="381331278177708" type="player">
+                            <param id="0" name="Instance variable">NoteOrder</param>
+                            <param id="1" name="Value">PianoKeyMenu.letterOrder</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="937117437063952" type="PianoWoodBG2">
+                            <param id="0" name="Instance variable">notePositionY</param>
+                            <param id="1" name="Value">staff.Y - 12</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="435282455422742" type="System">
+                            <param id="0" name="Object to create">Note</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">PianoWoodBG2.notePositionX</param>
+                            <param id="3" name="Y">PianoWoodBG2.notePositionY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="213670434847454">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="397985123620916" type="player">
+                            <param id="0" name="Object">PianoKeyMenu2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="599494028680330" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;&quot;&amp;PianoKeyMenu2.note</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="206478910263547" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="961687758725616" type="player">
+                            <param id="0" name="Instance variable">NoteOrder</param>
+                            <param id="1" name="Value">PianoKeyMenu2.letterOrder</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="842555294885430" type="PianoWoodBG2">
+                            <param id="0" name="Instance variable">notePositionY</param>
+                            <param id="1" name="Value">staff.Y - 18</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="860369086006743" type="System">
+                            <param id="0" name="Object to create">Note</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">PianoWoodBG2.notePositionX</param>
+                            <param id="3" name="Y">PianoWoodBG2.notePositionY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268493742766587">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="786596357559046" type="player">
+                            <param id="0" name="Object">PianoKeyMenu3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="336117566792369" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;&quot;&amp;PianoKeyMenu3.note</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="753601932415106" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="490254404772883" type="player">
+                            <param id="0" name="Instance variable">NoteOrder</param>
+                            <param id="1" name="Value">PianoKeyMenu3.letterOrder</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="389093768685438" type="PianoWoodBG2">
+                            <param id="0" name="Instance variable">notePositionY</param>
+                            <param id="1" name="Value">staff.Y - 24</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="419614256552240" type="System">
+                            <param id="0" name="Object to create">Note</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">PianoWoodBG2.notePositionX</param>
+                            <param id="3" name="Y">PianoWoodBG2.notePositionY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="948475237824180">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="672757585099258" type="PianoKeyMenu4">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="668031144083262">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="674782987676992" type="player">
+                                    <param id="0" name="Object">PianoKeyMenu4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="116271785148150" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">&quot;&quot;&amp;PianoKeyMenu4.note</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="759729333608296" type="player">
+                                    <param id="0" name="Instance variable">notesLeft</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="551100214492629" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Value">PianoKeyMenu4.letterOrder</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="883764812608947" type="PianoWoodBG2">
+                                    <param id="0" name="Instance variable">notePositionY</param>
+                                    <param id="1" name="Value">staff.Y - 30</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="246433572676208" type="System">
+                                    <param id="0" name="Object to create">Note</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="X">PianoWoodBG2.notePositionX</param>
+                                    <param id="3" name="Y">PianoWoodBG2.notePositionY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="455231897557677">
+            <conditions>
+                <condition id="-18" name="On created" sid="805103562477099" type="Note" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="702325324609408" type="Note">
+                    <param id="0" name="Frame number">choose(0,1,2,3,4,5)</param>
+                </action>
+                <action id="2" name="Stop" sid="458431828485418" type="Note" />
+                <action behavior="Bullet" id="5" name="Set enabled" sid="116570934406812" type="Note">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="596014800821180" type="PianoWoodBG2">
+                    <param id="0" name="Instance variable">notePositionX</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="149898629084418">
+            <conditions>
+                <condition id="0" name="On function" sid="248128638700900" type="Function">
+                    <param id="0" name="Name">&quot;reset&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="567221397765061" type="Audio">
+                    <param id="0" name="Audio file">WrongNote</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;wrong&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="230590116392214" type="player">
+                    <param id="0" name="Instance variable">notesLeft</param>
+                    <param id="1" name="Value">Self.CurLevNotes</param>
+                </action>
+                <action id="-9" name="Destroy" sid="810721553269058" type="Note" />
+                <action id="-10" name="Set value" sid="452704670160401" type="player">
+                    <param id="0" name="Instance variable">NoteOrder</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="567575449508873" type="PianoWoodBG2">
+                    <param id="0" name="Instance variable">notePositionX</param>
+                    <param id="1" name="Value">SheetMusic.X + 50</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="474838273353127" type="player">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="525479023430282">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="568993155003711" type="player">
+                    <param id="0" name="Instance variable">level</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="698378187588437">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="206125898810434" type="Audio">
+                            <param id="0" name="Tag">&quot;HCB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="169961788803372">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="756745388567911" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;abcabc&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="951028659705103" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Play" sid="653968713098397" type="Audio">
+                                    <param id="0" name="Audio file">HotCrossedBuns1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;HCB&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="902419963472669">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="722663044717173" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="756601678606644">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="546866018474187" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;a&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="380369302202684">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="343623336341002" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="955314047644651" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="956025725723074">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="295521353014435" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="587097373161772">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="334975053313873" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ab&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="946650511054164">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="110884268265673" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="689157975828397" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="836820870691419">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="840866492216997" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="750010275168972">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="850736966700864" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;abc&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="693797091383760">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="775451540924431" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="291918610341375" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="416413348276704">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="934045080891251" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="773794364557388">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="577035173571496" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;abca&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="538668541165281">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="421834946317765" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="314709606304223" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="563911761982715">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="447758675800590" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="988183907896331">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="783359345827998" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;abcab&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="695328081810650">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="249001920263912" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="845984248747781" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="940095764566536">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="169138559315271" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="388677073323473">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="672077635174283" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;abcabc&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="971653534101164">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="995757229968552" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="547212257610764" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="271707138940151">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="929371620169871" type="player">
+                            <param id="0" name="Instance variable">NoteOrder</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;abcabc&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="533552296564931">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="230093945298600" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="425525747888337" type="Audio">
+                                    <param id="0" name="Tag">&quot;HCB&quot;</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="976371263312505" type="Lightbulb" />
+                                <action id="-16" name="Wait" sid="583867651870439" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Play" sid="654710809007112" type="Audio">
+                                    <param id="0" name="Audio file">HotCrossedBuns2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;HCB2&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="280068651438627" type="PianoKeyMenu">
+                                    <param id="0" name="Instance variable">note</param>
+                                    <param id="1" name="Value">&quot;ENote&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="854786741200075" type="PianoKeyMenu2">
+                                    <param id="0" name="Instance variable">note</param>
+                                    <param id="1" name="Value">&quot;FNote&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="756532835524747" type="PianoKeyMenu3">
+                                    <param id="0" name="Instance variable">note</param>
+                                    <param id="1" name="Value">&quot;GNote&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="796586706552877" type="player">
+                                    <param id="0" name="Instance variable">CurLevNotes</param>
+                                    <param id="1" name="Value">8</param>
+                                </action>
+                                <action id="0" name="Call function" sid="915571551069789" type="Function">
+                                    <param id="0" name="Name">&quot;reset&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="3" name="Set volume" sid="246136488360651" type="Audio">
+                                    <param id="0" name="Tag">&quot;wrong&quot;</param>
+                                    <param id="1" name="dB">-20</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="290309329916417" type="player">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="158204098897662">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="769320120189444" type="player">
+                    <param id="0" name="Instance variable">level</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="156418560002097">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="919241838970095" type="Audio">
+                            <param id="0" name="Tag">&quot;HCB2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="580682094888160">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="102940527323725" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;abbcabbc&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="933288211665054" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Play" sid="625075299452696" type="Audio">
+                                    <param id="0" name="Audio file">HotCrossedBuns2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;HCB2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="666179155830892">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="460192921987580" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="177254054018426">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="493128897110808" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;a&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="507693313649532">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="631088638150516" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="240798469877008" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="234139690629106">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="341463209890063" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="632128914063521">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="227784563619308" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ab&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="806758977828153">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="566725618085981" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="623208502979822" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="871816103341430">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="845592134259443" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="703373983755960">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="259003993366239" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;abb&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="508350644365537">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="584260249118719" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="728870374705199" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="726390888194488">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="605448918501799" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="775089077601487">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="143458217386004" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;abbc&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="461439719031523">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="240732627446977" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="141856007071358" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="645183238227206">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="608004076937025" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="887829099083368">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="157895115158496" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;abbca&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="159576982117340">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="246505547292791" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="867461822331260" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="489949570042113">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="356448345058600" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="911454501765917">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="678423036295852" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;abbcab&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="762991029425756">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="698099639879833" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="485384473431026" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="809547283445475">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="225220363457789" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="455468543995187">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="417290680137348" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;abbcabb&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="819185156954552">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="380077090440807" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="474761281973628" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="835584352992718">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="294527866782293" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="299326131815150">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="393866910119105" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;abbcabbc&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="581903252477918">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="763505270213570" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="174484416582718" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="372751816588733">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="139340371410710" type="player">
+                            <param id="0" name="Instance variable">NoteOrder</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;abbcabbc&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="973344541508983">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="189143337156278" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="388572776572831" type="Audio">
+                                    <param id="0" name="Tag">&quot;HCB2&quot;</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="144402982770259" type="Lightbulb" />
+                                <action id="-16" name="Wait" sid="185315080555929" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Play" sid="320669951668702" type="Audio">
+                                    <param id="0" name="Audio file">YankeeDoodle</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;YD&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="955940966154122" type="PianoKeyMenu">
+                                    <param id="0" name="Instance variable">note</param>
+                                    <param id="1" name="Value">&quot;CNote&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="295783554542763" type="PianoKeyMenu2">
+                                    <param id="0" name="Instance variable">note</param>
+                                    <param id="1" name="Value">&quot;DNote&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="654404638635455" type="PianoKeyMenu3">
+                                    <param id="0" name="Instance variable">note</param>
+                                    <param id="1" name="Value">&quot;ENote&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="465786998837040" type="player">
+                                    <param id="0" name="Instance variable">CurLevNotes</param>
+                                    <param id="1" name="Value">7</param>
+                                </action>
+                                <action id="0" name="Call function" sid="754732622103224" type="Function">
+                                    <param id="0" name="Name">&quot;reset&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="3" name="Set volume" sid="677754702592429" type="Audio">
+                                    <param id="0" name="Tag">&quot;wrong&quot;</param>
+                                    <param id="1" name="dB">-20</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="887009932219380" type="player">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="989478537796412">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="575016063535915" type="player">
+                    <param id="0" name="Instance variable">level</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="329732295315709">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="119342427905337" type="Audio">
+                            <param id="0" name="Tag">&quot;YD&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="188701379613688">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="639475349210332" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;ccbacab&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="574168066137935" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Play" sid="906205635232580" type="Audio">
+                                    <param id="0" name="Audio file">YankeeDoodle</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;YD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="717450583208206">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="419657368456742" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="858528803770042">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="845149597114154" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;c&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="258840058101665">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="650725620731808" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="876472667660709" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="915255600286211">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="795529826835312" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="508618435255593">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="151658127138222" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;cc&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="341252925533695">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="216797430608958" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="271844237291580" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="787096673432221">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="374611897996983" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="958479589477839">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="541915260326899" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ccb&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="588478621455961">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="968312263962622" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="244891170761937" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="199524686935175">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="671385904104487" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="380752648060431">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="554211124572313" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ccba&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="891167045413635">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="269315023756457" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="879966981336955" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="544115205045540">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="891006549755546" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="205692447416059">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="255415135318158" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ccbac&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="160397719213608">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="365311407127661" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="294666284222087" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="465878743448295">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="449659238415662" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="317526023306115">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="978154392131976" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ccbaca&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="165454002790529">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="833044217392590" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="759885266679744" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="370864895773552">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="187001129237825" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="745875649569949">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="797626309807260" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ccbacab&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="995368847933507">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="506852407086392" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="598144728036359" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="236545772871018">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="225838352675033" type="player">
+                            <param id="0" name="Instance variable">NoteOrder</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ccbacab&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="954897092680317">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="335530843677907" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="302362838682930" type="Audio">
+                                    <param id="0" name="Tag">&quot;YD&quot;</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="272016362969787" type="Lightbulb" />
+                                <action id="-16" name="Wait" sid="878988717398366" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Play" sid="492205711712236" type="Audio">
+                                    <param id="0" name="Audio file">YankeeDoodle2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;YD2&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="846909031193500" type="PianoKeyMenu">
+                                    <param id="0" name="Instance variable">note</param>
+                                    <param id="1" name="Value">&quot;CNote&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="292324812306893" type="PianoKeyMenu2">
+                                    <param id="0" name="Instance variable">note</param>
+                                    <param id="1" name="Value">&quot;DNote&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="483492925252087" type="PianoKeyMenu3">
+                                    <param id="0" name="Instance variable">note</param>
+                                    <param id="1" name="Value">&quot;ENote&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="391863919091627" type="player">
+                                    <param id="0" name="Instance variable">CurLevNotes</param>
+                                    <param id="1" name="Value">6</param>
+                                </action>
+                                <action id="0" name="Call function" sid="384411624769150" type="Function">
+                                    <param id="0" name="Name">&quot;reset&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="3" name="Set volume" sid="733626004036241" type="Audio">
+                                    <param id="0" name="Tag">&quot;wrong&quot;</param>
+                                    <param id="1" name="dB">-20</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="932696876403275" type="player">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="365232353250018">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="983253026383733" type="player">
+                    <param id="0" name="Instance variable">level</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="155007797672677">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="980367366594298" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="896778005811395" type="PianoKeyMenu4">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="595884718828899">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="499137730462704" type="Audio">
+                            <param id="0" name="Tag">&quot;YD2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="950555527765650">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="355581815677320" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;ccbacd&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="256657010738670" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Play" sid="633730384456791" type="Audio">
+                                    <param id="0" name="Audio file">YankeeDoodle2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;YD2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="654034989789682">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="488523333766350" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="739275839138954">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="903527176990073" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;c&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="659242668674645">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="606476084493922" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="345814643837064" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="731348968746995">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="229797230424133" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="281334248542540">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="957115484404639" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;cc&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="861971647606433">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="588829767441486" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="310538118817735" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="637917277130785">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="364679025762625" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="984231360806343">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="383329918058298" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ccb&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="814415895987209">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="517140475588103" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="858027885216970" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="349955318286454">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="741637368162845" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="178016379780581">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="706962808368817" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ccba&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="420322449202972">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="637544985960560" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="886207931623243" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="399461843078000">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="848262088687177" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="711541718339739">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="563493795248684" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ccbac&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="951376412868078">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="395146890957408" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="663194516248861" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="962635185009625">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="662289710718774" type="player">
+                            <param id="0" name="Instance variable">notesLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="544097186183907">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="536727031955866" type="player">
+                                    <param id="0" name="Instance variable">NoteOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ccbacd&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="403605371045813">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="671075709177517" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="950678534688491" type="Function">
+                                            <param id="0" name="Name">&quot;reset&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="471771353477019">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="732167148729339" type="player">
+                            <param id="0" name="Instance variable">NoteOrder</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ccbacd&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="427359857219240">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="995757853737723" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="958138201605831" type="Audio">
+                                    <param id="0" name="Tag">&quot;YD2&quot;</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="206176418008757" type="Lightbulb" />
+                                <action id="-16" name="Wait" sid="989792120029993" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="189414810562262" type="Audio">
+                                    <param id="0" name="Tag">&quot;wrong&quot;</param>
+                                    <param id="1" name="dB">-20</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="204988877921297" type="player">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="627025337837836" type="EndFade" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="506888078320073">
+            <conditions>
+                <condition behavior="Fade" id="1" name="On fade-in finished" sid="122593815834204" type="EndFade" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="951197306965303" type="System">
+                    <param id="0" name="Layout">Win</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

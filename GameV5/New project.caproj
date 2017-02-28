@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="UI">
+            <object-type name="PianoKeyMenu" sid="606305948917817">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="note" sid="200294645330108" type="string" />
+                    <instance-variable name="letterOrder" sid="722016887274732" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="108234098392539" speed="5">
+                        <frame duration="1" hotspotX="0.439024" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PianoKeyMenu2" sid="893117572545472">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="note" sid="387721353675674" type="string" />
+                    <instance-variable name="letterOrder" sid="297199429953882" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="394514017005512" speed="5">
+                        <frame duration="1" hotspotX="0.439024" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PianoKeyMenu3" sid="118226742614857">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="note" sid="837175389499231" type="string" />
+                    <instance-variable name="letterOrder" sid="837765050220798" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="193779999748015" speed="5">
+                        <frame duration="1" hotspotX="0.560976" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PianoFade1" sid="177420986337813">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="983417996926610" speed="5">
+                        <frame duration="1" hotspotX="0.439024" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PianoFade2" sid="407467335235981">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683127419884089" speed="5">
+                        <frame duration="1" hotspotX="0.439024" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PianoFade3" sid="306732702636066">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903971608552858" speed="5">
+                        <frame duration="1" hotspotX="0.560976" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Credits" sid="648622422586220">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="Exit" sid="220312828011055">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="Play" sid="787549524290843">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="ArtCredit" sid="998916853633451">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="DevelopCredits" sid="601005620679285">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="PianoKeyMenu4" sid="192487800849145">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="note" sid="215243100697785" type="string" />
+                    <instance-variable name="letterOrder" sid="481172387502096" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="641667157381907" speed="5">
+                        <frame duration="1" hotspotX="0.560976" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PianoFade4" sid="241351377963277">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="462363551455984" speed="5">
+                        <frame duration="1" hotspotX="0.560976" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="BG">
+            <object-type name="PianoWoodBG" sid="688929575176437">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="itemSelected" sid="325802193813358" type="number" />
+                    <instance-variable name="notePosition" sid="426989712031975" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="197233466759498" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\david\Downloads\GG2\GG2Proj3\Art\Project-3-V2---Victoria-Turqman---David-Kirman-master\Project-3---Victoria-Turqman---David-Kirman-master\Assets\Art\CharcoalDamask.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Note" sid="344041882063599">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="572109693500417">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="536734307251084">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="795286539133448" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SheetMusic" sid="813088697521602">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="PianoKeySharp" sid="980164401594226">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780603944740846" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PianoWoodBG2" sid="387287111754744">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="notePositionY" sid="363705522695792" type="number" />
+                    <instance-variable name="notePositionX" sid="464262077972494" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468088313078050" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\david\Downloads\GG2\GG2Proj3\Art\Project-3-V2---Victoria-Turqman---David-Kirman-master\Project-3---Victoria-Turqman---David-Kirman-master\Assets\Art\CharcoalDamask.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Browser" sid="968048006303536">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Keyboard" sid="205802567023371">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Audio" sid="225271126972092">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Return" sid="442393260876921">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="player" sid="656803101496891">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="anim" sid="981369415314453" type="string" />
+                <instance-variable name="NoteOrder" sid="569842140776386" type="string" />
+                <instance-variable name="notesLeft" sid="809930830186800" type="number" />
+                <instance-variable name="level" sid="892821127045817" type="number" />
+                <instance-variable name="CurLevNotes" sid="136557129075671" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="374441954860898">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="201417214238922">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="630137205512008">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="935732650889741" speed="8">
+                    <frame duration="1" hotspotX="0.503185" hotspotY="0.501976" original-source="C:\Users\david\Downloads\GG2\GG2Proj3\Art\Project-3---Victoria-Turqman---David-Kirman-master\Assets\Art\mike-front1.png">
+                        <collision-poly>
+                            <point x="0.694268" y="0.865612" />
+                            <point x="0.713376" y="0.972332" />
+                            <point x="0.324841" y="0.968379" />
+                            <point x="0.343949" y="0.86166" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="Walking" pingpong="1" repeatcount="1" repeatto="0" sid="729536446771530" speed="5">
+                    <frame duration="1" hotspotX="0.490323" hotspotY="0.505929" original-source="C:\Users\david\Downloads\GG2\GG2Proj3\Art\Project-3---Victoria-Turqman---David-Kirman-master\Assets\Art\mike-walkfront.png">
+                        <collision-poly>
+                            <point x="0.703226" y="0.86166" />
+                            <point x="0.722581" y="0.960474" />
+                            <point x="0.329032" y="0.968379" />
+                            <point x="0.329032" y="0.86166" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503185" hotspotY="0.501976">
+                        <collision-poly>
+                            <point x="0.33758" y="0.869565" />
+                            <point x="0.700637" y="0.873518" />
+                            <point x="0.764332" y="0.968379" />
+                            <point x="0.292994" y="0.968379" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.490323" hotspotY="0.501976">
+                        <collision-poly>
+                            <point x="0.696774" y="0.960474" />
+                            <point x="0.270968" y="0.964427" />
+                            <point x="0.341935" y="0.869565" />
+                            <point x="0.658065" y="0.87747" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="WalkingBack" pingpong="1" repeatcount="1" repeatto="0" sid="416977929810795" speed="5">
+                    <frame duration="1" hotspotX="0.490323" hotspotY="0.503937" original-source="C:\Users\david\Downloads\GG2\GG2Proj3\Art\Project-3---Victoria-Turqman---David-Kirman-master\Assets\Art\mike-walkback.png">
+                        <collision-poly>
+                            <point x="0.374194" y="0.877953" />
+                            <point x="0.658065" y="0.874015" />
+                            <point x="0.722581" y="0.96063" />
+                            <point x="0.329032" y="0.964567" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.496815" hotspotY="0.50996" original-source="C:\Users\david\Downloads\GG2\GG2Proj3\Art\Project-3---Victoria-Turqman---David-Kirman-master\Assets\Art\mike-standingback.png">
+                        <collision-poly>
+                            <point x="0.363057" y="0.880479" />
+                            <point x="0.656052" y="0.876495" />
+                            <point x="0.751593" y="0.972113" />
+                            <point x="0.299363" y="0.972112" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.509677" hotspotY="0.503937" original-source="C:\Users\david\Downloads\GG2\GG2Proj3\Art\Project-3---Victoria-Turqman---David-Kirman-master\Assets\Art\mike-walkback.png">
+                        <collision-poly>
+                            <point x="0.716129" y="0.956693" />
+                            <point x="0.264516" y="0.956693" />
+                            <point x="0.374193" y="0.862204" />
+                            <point x="0.645162" y="0.866141" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tut1" sid="513508606864224">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="SpeechBubble" sid="123414147467598">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="156613277834685">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577835368948743" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Controls1" sid="169576154902734">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="Controls2" sid="501491591887358">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="Spacebar" sid="800343518901834">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Appear" sid="711335281596338" type="boolean" />
+                <instance-variable name="tut" sid="318933581950206" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Timer" sid="739733562487697">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="551646232458980" speed="2">
+                    <frame duration="1" hotspotX="0.494024" hotspotY="0.530435" original-source="C:\Users\david\Downloads\GG2\GG2Proj3\Art\Project-3---Victoria-Turqman---David-Kirman-master\Assets\Art\spacebar-pagedown.png">
+                        <collision-poly>
+                            <point x="0.0478088" y="0.113043" />
+                            <point x="0.494024" y="0.0173913" />
+                            <point x="0.948207" y="0.0956522" />
+                            <point x="0.992032" y="0.521739" />
+                            <point x="0.960159" y="0.982609" />
+                            <point x="0.0318725" y="0.973913" />
+                            <point x="0.00796813" y="0.521739" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.494024" hotspotY="0.530435">
+                        <collision-poly>
+                            <point x="0.0478088" y="0.113043" />
+                            <point x="0.494024" y="0.0173913" />
+                            <point x="0.948207" y="0.0956522" />
+                            <point x="0.992032" y="0.521739" />
+                            <point x="0.960159" y="0.982609" />
+                            <point x="0.0318725" y="0.973913" />
+                            <point x="0.00796813" y="0.521739" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tut2" sid="822041485750831">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="wall" sid="390750389740821">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="810056111027959">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767375046760698" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="295291313840464">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Lightbulb" sid="907494764918932">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="855840139050342">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="140024142536654">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="553420988739828" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\david\Downloads\GG2\GG2Proj3\Art\Project-3-V2---Victoria-Turqman---David-Kirman-master\Project-3---Victoria-Turqman---David-Kirman-master\Assets\Art\lightbulb.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.046875" />
+                            <point x="0.8125" y="0.1875" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.703125" y="0.703125" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.296875" y="0.703125" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="staff" sid="436067893395336">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="687073938945857" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Users\david\Downloads\GG2\GG2Proj3\Art\Project-3---Victoria-Turqman---David-Kirman-master\Assets\Art\blank staff.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Thanks" sid="870427124676784">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Pin" sid="592880098085333">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="EndFade" sid="820513842842252">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Fade" sid="388632929660919">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Title.xml</layout>
+        <layout>Credits.xml</layout>
+        <layout>Game.xml</layout>
+        <layout>Win.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>EventTitle.xml</event-sheet>
+        <event-sheet>EventCredits.xml</event-sheet>
+        <event-sheet>EventGame.xml</event-sheet>
+        <event-sheet>TitleCommon.xml</event-sheet>
+        <event-sheet>EventWin.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Browser" uid="2" />
+        <global-instance type="Keyboard" uid="10" />
+        <global-instance type="Audio" uid="13">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="49" />
+    </global-instances>
+    <sounds-folder>
+        <file name="CNote.m4a" />
+        <file name="CNote.ogg" />
+        <file name="DNote.m4a" />
+        <file name="DNote.ogg" />
+        <file name="ENote.m4a" />
+        <file name="ENote.ogg" />
+        <file name="FNote.m4a" />
+        <file name="FNote.ogg" />
+        <file name="GNote.m4a" />
+        <file name="GNote.ogg" />
+        <file name="H(A)Note.m4a" />
+        <file name="H(A)Note.ogg" />
+        <file name="H(B)Note.m4a" />
+        <file name="H(B)Note.ogg" />
+        <file name="H(C)Note.m4a" />
+        <file name="H(C)Note.ogg" />
+        <file name="WrongNote.m4a" />
+        <file name="WrongNote.ogg" />
+        <file name="BNote.m4a" />
+        <file name="BNote.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="RYBFull.m4a" />
+        <file name="RYBFull.ogg" />
+        <file name="HotCrossedBuns1.m4a" />
+        <file name="HotCrossedBuns1.ogg" />
+        <file name="YankeeDoodle.m4a" />
+        <file name="YankeeDoodle.ogg" />
+        <file name="HotCrossedBuns2.m4a" />
+        <file name="HotCrossedBuns2.ogg" />
+        <file name="YankeeDoodle2.m4a" />
+        <file name="YankeeDoodle2.ogg" />
+        <file name="HSKTFull.m4a" />
+        <file name="HSKTFull.ogg" />
+        <file name="MHALLFull.m4a" />
+        <file name="MHALLFull.ogg" />
+        <file name="WOTBFull.m4a" />
+        <file name="WOTBFull.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

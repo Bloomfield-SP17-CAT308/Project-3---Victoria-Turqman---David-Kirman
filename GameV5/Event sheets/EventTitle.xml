@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventTitle</name>
+    <events>
+        <include>TitleCommon</include>
+        <event-block sid="276386025202831">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="495850689537626" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="722285712403472">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="636647456821468" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="886325206345835" type="System">
+                            <param id="0" name="Object to create">Note</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">640</param>
+                            <param id="3" name="Y">PianoWoodBG.notePosition</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="833195986366070" type="Controls1">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="663334389033665" type="Controls2">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="177190460228794">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="214608243129393" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="604741103138145">
+            <conditions>
+                <condition id="-22" name="Else" sid="413632261220193" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="246600978602557" type="Controls1">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="530181727771480" type="Controls2">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="753131842740822">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="486914462141379" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="396361208772972">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="443400330520171" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="307111104204521" type="System">
+                            <param id="0" name="Object to create">Note</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">640</param>
+                            <param id="3" name="Y">PianoWoodBG.notePosition</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="491829577101782" type="Credits">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="608912648958269">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="889746404563942" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="703588549379029" type="System">
+                            <param id="0" name="Layout">Credits</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="269683962457232">
+            <conditions>
+                <condition id="-22" name="Else" sid="630760506898200" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="692109336995735" type="Credits">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="864495335192537">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="122543625849502" type="PianoWoodBG">
+                    <param id="0" name="Instance variable">itemSelected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="304916136995768">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="927274261811697" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="720123678502026" type="System">
+                            <param id="0" name="Object to create">Note</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">640</param>
+                            <param id="3" name="Y">PianoWoodBG.notePosition</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="948119976922298" type="Play">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="363939160674333">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="473845353416499" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="678943824017843" type="System">
+                            <param id="0" name="Layout">Game</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="859016053866545">
+            <conditions>
+                <condition id="-22" name="Else" sid="258096744988270" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="649228326673995" type="Play">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="302317636202880">
+            <conditions>
+                <condition id="-18" name="On created" sid="549412743453308" type="Note" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="349262820104211" type="Note">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="5" name="Set frame" sid="601212420372855" type="Note">
+                    <param id="0" name="Frame number">choose(0,1,2,3,4,5)</param>
+                </action>
+                <action id="2" name="Stop" sid="526820533768036" type="Note" />
+            </actions>
+        </event-block>
+        <event-block sid="654333167740745">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="654668307838180" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="688405376573112" type="Audio">
+                    <param id="0" name="Audio file">RYBFull</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;RYB&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="370436952114632">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="900709562233604" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="132566958052828" type="Audio">
+                    <param id="0" name="Tag">&quot;RYB&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
